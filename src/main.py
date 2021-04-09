@@ -45,9 +45,16 @@ rz_unipolar = sinal_digital(
 )
 figura, (grafico_1, grafico_2) = pyplot.subplots(2, 1)
 
+x = numpy.arange(0, len(sequencia_de_bits), )
+x2 = numpy.arange(0, len(sequencia_de_bits), 1/100)
+
+
 grafico_1.stem(
+    x,
     sequencia_de_bits,
     use_line_collection=True,
 )
-grafico_2.plot(rz_unipolar, ".-")
+
+
+grafico_2.plot(x2,rz_unipolar, ".-")
 pyplot.show()
